@@ -1,0 +1,22 @@
+{
+  "name": "teamprofilebuilder",
+  "version": "1.0.0",
+  "description": "employee profile creator OOP",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanspena/Party.git"
+  },
+  "author": "ryanspena",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ryanspena/Party/issues"
+  },
+  "homepage": "https://github.com/ryanspena/Party#readme"
+}
