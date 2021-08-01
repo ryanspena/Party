@@ -1,7 +1,7 @@
-const Employee = require('../lib/Employee.js');
+var Employee = '../lib/Employee.js';
 
-test(() => {
-  const employee = new Employee('Bucky', 0, 'buckyreginaldbarnes@bark.com');
+test('Employee object', () => {
+  var employee = new Employee('Bucky', 0, 'buckyreginaldbarnes@bark.com');
 
   expect(employee.name).toBe('Bucky');
   expect(employee.id).toBe(0);
@@ -9,8 +9,8 @@ test(() => {
   expect(employee.role).toBe('Manager');
 });
 
-test(() => {
-  const employee = new Employee('Winter Soldier', 1, 'captainamerica@us.edu');
+test('But what is this', () => {
+  var employee = new Employee('Winter Soldier', 1, 'captainamerica@us.edu');
 
   expect(employee.getName()).toBe('Winter Soldier');
   expect(employee.getId()).toBe(1);
