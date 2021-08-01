@@ -18,5 +18,12 @@
   "bugs": {
     "url": "https://github.com/ryanspena/Party/issues"
   },
-  "homepage": "https://github.com/ryanspena/Party#readme"
+  "homepage": "https://github.com/ryanspena/Party#readme",
+  "devDependencies": {
+    "@babel/code-frame": "^7.14.5"
+  },
+  "dependencies": {
+    "inquirer": "^8.1.2",
+    "jest": "^27.0.6"
+  }
 }
