@@ -24,7 +24,7 @@ test('', () => {
 });
 
 test('', () => {
-  const intern = new Intern(
+  var intern = new Intern(
     "Roman's Revenge",
     10,
     'psrated@gmail.com',

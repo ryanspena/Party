@@ -20,7 +20,7 @@ test('', () => {
 });
 
 test('', () => {
-  const manager = new Manager('Torree', 4, 'utcbootcamp@whatis.com', 1);
+  var manager = new Manager('Torree', 4, 'utcbootcamp@whatis.com', 1);
 
   expect(manager.role).toBe('Manager');
 });

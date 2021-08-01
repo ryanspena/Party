@@ -1,4 +1,4 @@
-const generalQuestions = [
+var genericQuestions = [
   {
     type: 'input',
     name: 'name',
@@ -11,7 +11,7 @@ const generalQuestions = [
   },
 ];
 
-const managerQuestions = [
+var managerQuestions = [
   {
     type: 'input',
     name: 'officeNumber',
@@ -19,7 +19,7 @@ const managerQuestions = [
   },
 ];
 
-const engineerQuestions = [
+var engineerQuestions = [
   {
     type: 'input',
     name: 'github',
@@ -27,7 +27,7 @@ const engineerQuestions = [
   },
 ];
 
-const internQuestions = [
+var internQuestions = [
   {
     type: 'input',
     name: 'school',
@@ -38,10 +38,10 @@ const internQuestions = [
 module.exports = (role) => {
   switch (role) {
     case 'Manager':
-      return generalQuestions.concat(managerQuestions);
+      return genericQuestions.concat(managerQuestions);
     case 'Engineer':
-      return generalQuestions.concat(engineerQuestions);
+      return genericQuestions.concat(engineerQuestions);
     case 'Intern':
-      return generalQuestions.concat(internQuestions);
+      return genericQuestions.concat(internQuestions);
   }
 };
