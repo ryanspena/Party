@@ -1,6 +1,6 @@
-var Engineer = require('../lib/Engineer');
+var Engineer = require('../lib/Engineer.js');
 
-test('creates engineer object', () => {
+test('creates the object', () => {
   const engineer = new Engineer('me', '007', 'ryan@me.com', 'psrated');
 
   expect(engineer.name).toBe('me');
@@ -9,14 +9,14 @@ test('creates engineer object', () => {
   expect(engineer.gitHub).toBe('psrated');
 });
 
-test('gets engineer username', () => {
+test('gets the username', () => {
   const engineer = new Engineer('me', '007', 'ryan@me.com', 'psrated');
 
   expect(engineer.getGitHub()).toEqual(expect.stringContaining('psrated'));
   expect(engineer.getGitHub()).toEqual(expect.any(String));
 });
 
-test("gets engineer's role", () => {
+test('gets role', () => {
   const engineer = new Engineer('me', '007', 'ryan@me.com', 'psrated');
 
   expect(engineer.getRole()).toEqual(expect.stringContaining('Engineer'));
