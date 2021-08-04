@@ -1,19 +1,39 @@
-var Employee = '../lib/Employee.js';
+var Employee = require('/lib/Employee.js');
 
-test('Employee object', () => {
-  var employee = new Employee('Bucky', 0, 'buckyreginaldbarnes@bark.com');
+test('creates employee object', () => {
+  const employee = new Employee('Bucky', '069', 'wintersoldier@barnes.gov');
 
   expect(employee.name).toBe('Bucky');
-  expect(employee.id).toBe(0);
-  expect(employee.email).toBe('buckyreginaldbarnes@bark.com');
-  expect(employee.role).toBe('Manager');
+  expect(employee.id).toBe('069');
+  expect(employee.email).toBe('wintersoldier@barnes.gov');
+  expect(employee.role).toBe('Employee');
 });
 
-test('But what is this', () => {
-  var employee = new Employee('Winter Soldier', 1, 'captainamerica@us.edu');
+test('get employees name', () => {
+  const employee = new Employee('Bucky', '069', 'wintersoldier@barnes.gov');
 
-  expect(employee.getName()).toBe('Winter Soldier');
-  expect(employee.getId()).toBe(1);
-  expect(employee.getEmail()).toBe('captainamerica@us.edu');
-  expect(employee.getRole()).toBe('Manager');
+  expect(employee.getName()).toBe('Bucky');
+  expect(employee.getId()).toBe('069');
+  expect(employee.getEmail()).toBe('wintwintersoldier@barnes.gov');
+  expect(employee.getRole()).toBe('Employee');
+});
+
+test('get employees id', () => {
+  const employee = new Employee('Bucky', '069', 'wintersoldier@barnes.gov');
+  expect(employee.getId()).toEqual(expect.stringContaining('069'));
+  expect(employee.getId()).toEqual(expect.any(String));
+});
+
+test('get employees email address', () => {
+  const employee = new Employee('Bucky', '069', 'wintersoldier@barnes.gov');
+  expect(employee.getEmail()).toEqual(
+    expect.stringContaining('wintersoldier@barnes.gov')
+  );
+  expect(employee.getEmail()).toEqual(expect.any(String));
+});
+
+test('gets employees job role', () => {
+  const employee = new Employee('Bucky', '069', 'wintersoldier@barnes.gov');
+  expect(employee.getRole()).toEqual(expect.stringContaining('Employee'));
+  expect(employee.getRole()).toEqual(expect.any(String));
 });
